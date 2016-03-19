@@ -1,0 +1,4 @@
+struct hello_message {
+	string name; //@key
+	long count;
+};
