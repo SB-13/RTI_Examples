@@ -1,0 +1,22 @@
+RTI example for Java. First, you need to make sure that you have copied the following on your Pi from your Ubuntu VM:
+
+Make this directory on your Pi
+sudo mkdir /opt/rti_connext_dds-5.2.0/
+sudo mkdir /opt/rti_connext_dds-5.2.0/lib
+
+Copy these from the VM:
+
+/opt/rti_connext_dds-5.2.0/bin
+/opt/rti_connext_dds-5.2.0/java (entire directory)
+/opt/rti_connext_dds-5.2.0/armv6vfphLinux3.xgcc4.7.2 (entire directory)
+
+You can run the publisher/subscriber on a Raspberry Pi by running either of the following commands:
+
+make -f makefile_shape_armv6vfphLinux3.xgcc4.7.2 ShapeTypePublisher
+OR
+make -f makefile_shape_armv6vfphLinux3.xgcc4.7.2 ShapeTypeSubscriber
+
+Note, the VM can be either the publisher or subscriber. Also, make sure that the Raspberry Pi runs the other. For example, if the VM is running the Subscriber then the Pi should be running the Publisher.
+
+This will allow you to see that RTI Connext DDS is communicating over Wi-Fi from the VM to the Raspberry Pi.
+
